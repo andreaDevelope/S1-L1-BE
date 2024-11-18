@@ -7,13 +7,21 @@ public class Main {
         //es1
         System.out.println(moltiplica(10,20));
 
+        System.out.println("---------------------------------------------------");
+
         System.out.println(concatena("ciao ", 2));
+
+        System.out.println("---------------------------------------------------");
+
 
         String[] arrayOriginale = new String[] { "1", "2", "3", "4", "5" };
         String[] nuovoArray = inserisciInArray(arrayOriginale, "new 3");
         for(int i = 0; i < nuovoArray.length; i++){
             System.out.println(nuovoArray[i]);
         }
+
+        System.out.println("---------------------------------------------------");
+
 
         //es2
         Scanner sc = new Scanner(System.in);
@@ -34,6 +42,21 @@ public class Main {
         for(int i = stringArr.length -1; i >=0 ; i--){
             System.out.println(stringArr[i]);
         }
+
+        System.out.println("---------------------------------------------------");
+
+
+        //es3
+        System.out.println(perimetroRettangolo(10.2, 20.3));
+
+        System.out.println("---------------------------------------------------");
+
+
+        System.out.println(pariDispari(10));
+
+        System.out.println("---------------------------------------------------");
+
+        System.out.println("il perimetro del triangolo è: " + perimetroTriangolo(10.2, 10, 13.4));
     }
 
     //es1
@@ -65,6 +88,26 @@ public class Main {
         return risultato;
     }
 
+    //es3
 
+    public static String perimetroRettangolo(double param1, double param2){
+        double perimetro = 2 * ( param1 + param2);
+        String result = "il perimetro del tuo rettangolo è: " + perimetro;
+        return result;
+    }
+
+    public static byte pariDispari(int param){
+        if(param % 2 == 0){
+            return 0;
+        }else{
+            return 1;
+        }
+    }
+
+    public static double perimetroTriangolo(double param1, double param2, double param3){
+        double semiPerimetro = (param1 + param2 + param3)/2;
+        double area = Math.sqrt(semiPerimetro * (semiPerimetro - param1) * (semiPerimetro - param2) * (semiPerimetro - param3));
+        return area;
+    }
 
 }
